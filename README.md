@@ -43,7 +43,7 @@ def index():
 app.run()
 ```
 
-### glitch.com
+### `glitch.json`
 
 ```
 {
@@ -74,7 +74,7 @@ Create a new flask application:
 app = Flask(__name__)
 ```
 
-Have our application
+Have our application (place in a py file, like `app.py`)
 
 ```
 @app.route('/hello')
@@ -85,14 +85,25 @@ def hello():
 Running your application
 
 ```
+app.run()
+```
+
+And then...
+
+```
+python3 app.py
+```
+
+Alternatively...
+
+* don't add app.run
+* and use this to run instead
+	```
 export FLASK_APP=filename
 flask run
 ```
-
-One liner for running, debug (why?)
-
-```
-FLASK_APP=filename flask run
+* and for debug mode
+	```
 FLASK_DEBUG=1 FLASK_APP=filename flask run
 ```
 
