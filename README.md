@@ -6,18 +6,59 @@ This talk will essentially cover material sourced from the Flask Quickstart Docu
 
 ## Required
 
+* [glitch.com](glitch.com) or [repl.it][repli.it]
+
+OR
+
 * [Python](https://www.python.org/) (3 preferred)
 * [Flask](http://flask.pocoo.org/) 0.12.x
+* and, optionally...
+	* [virtualenv](https://virtualenv.pypa.io/en/stable/) - for maintaining different Python environments
+	* [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) - tools to simplify virtualenv usage
+* installation
+	* use brew / download binary
+	* `pip install flask`
 
-## Recommended
+## glitch.com
 
-* [virtualenv](https://virtualenv.pypa.io/en/stable/) - for maintaining different Python environments
-* [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) - tools to simplify virtualenv usage
+Bootstrap your application with these files
 
-## Installation
+### `requirements.txt`
 
-* use brew / download binary
-* `pip install flask`
+```
+Flask
+```
+
+### `server.py`
+
+```
+from flask import Flask
+import os
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+  return 'hello'
+
+app.run()
+```
+
+### glitch.com
+
+```
+{
+  "install": "pip3 install --user -r requirements.txt",
+  "start": "python3 server.py",
+  "watch": {
+    "restart": {
+      "include": [
+        "\\.py$",
+        "^start\\.sh"
+      ]
+    }
+  }
+}
+```
 
 ## Starting Out
 
