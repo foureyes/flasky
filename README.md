@@ -136,6 +136,11 @@ Challenge
 
 * create a page that rolls two six sided dice and displays both values!
 
+### Static Files
+
+* just create a `static` directory
+* files will be available at `/static`
+
 ### More Templating - Control Structures
 
 for loop
@@ -246,6 +251,7 @@ URL Building
 * `from flask import Flask, url_for`
 * `url_for('function_name')`
 * `url_for('function_name', path_variable="value")`
+
 
 ## Flash Messages
 
