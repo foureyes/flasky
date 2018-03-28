@@ -99,13 +99,13 @@ Alternatively...
 * don't add app.run
 * and use this to run instead
 	```
-export FLASK_APP=filename
-flask run
-```
+	export FLASK_APP=filename
+	flask run
+	```
 * and for debug mode
 	```
-FLASK_DEBUG=1 FLASK_APP=filename flask run
-```
+	FLASK_DEBUG=1 FLASK_APP=filename flask run
+	```
 
 ## Features
 
